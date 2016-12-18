@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/moon.css">
+    <link rel="stylesheet" href="css/archimedes.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section data-background-image="assets/img/cover.jpg">
+                <h2>Wet van Archimedes</h2>
+                <h3>Maarten Schroeven</h3>
+            </section>
+            <section>
+                <h2>Enkele afspraken</h2>
+
+                <p>
+                    <img src="assets/img/mute.png" style="border: 0; background: transparent; vertical-align: middle;" />
+                    <span style="vertical-align: middle;">GSM's uit of stil</span>
+                </p>
+                <p>Vragen? Stel ze!</p>
+            </section>
+            <section>
+                <h2>Over mij</h2>
+                <ul>
+                    <li>AI (Kandidaat 1*I)</li>
+                    <li>Duiker sinds 2009 bij Poseidon</li>
+                    <li>Webdeveloper</li>
+                </ul>
+            </section>
+            <section>
+                <section>
+                    <h2>Voorkennis</h2>
+                    <h3>Korte herhaling</h3>
+                </section>
+                <section>
+                    <h2>Druk</h2>
+                    <p class="fragment">Kracht uitgeoefend op oppervlakte</p>
+                    <p class="fragment">Pascal (Pa)</p>
+                    <p class="fragment">1 bar = 100 000 Pa</p>
+                </section>
+                <section>
+                    <h2>Soorten druk als duiker?</h2>
+                    <div>
+                        <div class="fragment">Luchtdruk/atmosferische druk (gem 1013 hPa op 0m)</div>
+                        <div>+</div>
+                        <div class="fragment">Waterdruk/hydrostatisch druk</div>
+                        <div class="fragment" style="border-top: 3px solid white;">Absolute druk</div>
+                    </div>
+                </section>
+                <section>
+                    <h2>Wet van Pascal</h2>
+                    <p class="fragment">Een druk, uitgeoefend op een deel van een vloeistof, plant zich in alle richtingen voort met dezelfde grootte.</p>
+                </section>
+                <section>
+                    <h2>Wet van Boyle - Mariotte</h2>
+                    <p class="fragment">Bij constante temperatuur is het volume van een bepaalde hoeveelheid gas omgekeerd evenredig met de druk</p>
+                </section>
+                <section>
+                    <h2>Enkele oefeningen</h2>
+                    <dl>
+                        <dt>Wat is de hydrostatische druk op 26m?</dt>
+                        <dd class="fragment">2.6 bar</dd>
+                        <dt>Wat is de absolute druk op 17m in een bergmeer gelegen op 2500m?</dt>
+                        <dd class="fragment">1.7 bar hydrostatische druk + 0.75 bar atmosferische druk = 2.45 absolute druk</dd>
+                        <dt>Als men een ballon op 20m diepte voorziet van 1l lucht, hoeveel lucht zal er dan aan de oppervlakte in zitten?</dt>
+                        <dd class="fragment">3 liter</dd>
+                    </dl>
+                </section>
+            </section>
+            <section data-background-image="assets/img/book.jpg" style="color: white;">
+                <p></p>
+            </section>
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            history: true,
+
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            dependencies: [{
+                src: 'plugin/markdown/marked.js'
+            }, {
+                src: 'plugin/markdown/markdown.js'
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }]
+        });
+    </script>
+</body>
+
+</html>
