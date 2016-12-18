@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>reveal.js</title>
+    <title>De wet van Archimedes</title>
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/moon.css">
@@ -35,18 +35,26 @@
                 <h2>Enkele afspraken</h2>
 
                 <p>
-                    <img src="assets/img/mute.png" style="border: 0; background: transparent; vertical-align: middle;" />
+                    <img src="assets/img/mute.png" style="border: 0; background: transparent; vertical-align: middle; box-shadow: none;" />
                     <span style="vertical-align: middle;">GSM's uit of stil</span>
                 </p>
+                <p>Interactieve les</p>
                 <p>Vragen? Stel ze!</p>
             </section>
             <section>
                 <h2>Over mij</h2>
                 <ul>
+                    <li>Maarten Schroeven</li>
                     <li>AI (Kandidaat 1*I)</li>
                     <li>Duiker sinds 2009 bij Poseidon</li>
                     <li>Webdeveloper</li>
                 </ul>
+            </section>
+            <section>
+                <h2>Inleiding</h2>
+                <p><q>Physics is imagination in a straight jacket.</q> - John Moffat</p>
+                <p><q>In physics, you don't have to go around making trouble for yourself — nature does it for you.</q> - Frank Wilczek</p>
+                <p><q>Physics is actually too hard for physicists.</q> - David Hilbert</p>
             </section>
             <section>
                 <section>
@@ -54,10 +62,52 @@
                     <h3>Korte herhaling</h3>
                 </section>
                 <section>
-                    <h2>Druk</h2>
-                    <p class="fragment">Kracht uitgeoefend op oppervlakte</p>
-                    <p class="fragment">Pascal (Pa)</p>
-                    <p class="fragment">1 bar = 100 000 Pa</p>
+                    <h2>Definities</h2>
+                    <h3>Massa</h3>
+                    <p class="fragment">Grootheid waarmee wordt gemeten hoe makkelijk het is een lichaam te versnellen</p>
+                    <ul class="fragment">
+                        <li>Symbool: <span class="fragment">m</span></li>
+                        <li>Eenheid: <span class="fragment">kg</span></li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Definities</h2>
+                    <h3>Kracht</h3>
+                    <div style = "display: flex;">
+                        <img class="fragment" src="assets/img/force.jpg" data-fragment-index="1"/>
+                        <div>
+                            <p class="fragment" data-fragment-index="1">Grootheid die een voorwerp van snelheid kan veranderen</p>
+                            <ul class="fragment" data-fragment-index="2">
+                                <li>Symbool: <span class="fragment" data-fragment-index="3">F</span></li>
+                                <li>Eenheid: <span class="fragment" data-fragment-index="4">N</span></li>
+                            </ul>
+                            <p class="fragment" data-fragment-index="5">1N is de kracht die na 1 seconde een massa van 1kg een snelheid van 1m/s geeft</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2>Definities</h2>
+                    <h3>Gewicht</h3>
+                    <p class="fragment">Kracht waarmee de aarde een lichaam aantrekt</p>
+                    <p class="fragment">Er is gemeten dat 1kg een gewicht heeft van 9.8N</p>
+                    <p class="fragment">Voor onze berekeningen ronden we dit af naar 10N</p>
+                </section>
+                <section>
+                    <h2>Definities</h2>
+                    <h3>Druk</h3>
+                    <p class="fragment">Kracht uitgeoefend op oppervlakte ($p=\frac{F}{A}$)</p>
+                    <ul class="fragment">
+                        <li>Symbool: <span class="fragment">p</span></li>
+                        <li>Eenheid: <span class="fragment">Pa</span></li>
+                    </ul>
+                    <p class="fragment">$1 bar = 100 000 Pa = 100 000\frac{N}{m^{2}}$</p>
+                </section>
+                <section>
+                    <h2>Wet van Pascal</h2>
+                    <blockquote data-fragment-index="1">
+                        Een druk, uitgeoefend op een deel van een vloeistof, plant zich in alle richtingen voort met dezelfde grootte.
+                    </blockquote>
+                    <img src="assets/img/pascal.jpg" data-fragment-index="2"/>
                 </section>
                 <section>
                     <h2>Soorten druk als duiker?</h2>
@@ -67,16 +117,19 @@
                         <div class="fragment">Waterdruk/hydrostatisch druk</div>
                         <div class="fragment" style="border-top: 3px solid white;">Absolute druk</div>
                     </div>
-                </section>
-                <section>
-                    <h2>Wet van Pascal</h2>
-                    <p class="fragment">Een druk, uitgeoefend op een deel van een vloeistof, plant zich in alle richtingen voort met dezelfde grootte.</p>
+                    <img class="fragment" src="assets/img/pascal2.jpg"/>
                 </section>
                 <section>
                     <h2>Wet van Boyle - Mariotte</h2>
-                    <p class="fragment">Bij constante temperatuur is het volume van een bepaalde hoeveelheid gas omgekeerd evenredig met de druk</p>
+                    <div class="fragment" style = "display: flex;">
+                        <img class="fragment" src="assets/img/boyle.jpg"/>
+                        <blockquote>
+                            <p>Bij constante temperatuur is het volume van een bepaalde hoeveelheid gas omgekeerd evenredig met de druk</p>
+                            <p>$p . V = Cte$</p>
+                        </blockquote>
+                    </div>
                 </section>
-                <section>
+                <section data-background-image="assets/img/blackboard.jpg" style="color: white;">
                     <h2>Enkele oefeningen</h2>
                     <dl>
                         <dt>Wat is de hydrostatische druk op 26m?</dt>
@@ -88,8 +141,135 @@
                     </dl>
                 </section>
             </section>
-            <section data-background-image="assets/img/book.jpg" style="color: white;">
-                <p></p>
+            <section data-background-image="assets/img/book.jpg">
+                <h2 style="text-shadow:#888 2px 2px 3px;">Tijd voor een verhaaltje!</h2>
+                <img class="fragment" style="width: 300px;" src="assets/img/true-story.gif" />
+            </section>
+            <section>
+                <section data-background-image="assets/img/experiment.jpg">
+                    <h2 style="text-shadow:#888 2px 2px 3px;">Tijd voor een proefje!</h2>
+                </section>
+                <section>
+                    <h2>Wet van Archimedes</h2>
+                    <blockquote class="fragment" data-fragment-index="1">
+                        <p>Een lichaam ondergedompeld in een vloeistof, ondergaat een opwaartse stuwkracht gelijk aan het gewicht van de verplaatste vloeistof.</p>
+                    </blockquote>
+                    <p class="fragment" data-fragment-index="2">Toepassingen in de duiksport:</p>
+                    <ul class="fragment" data-fragment-index="2">
+                        <li>Uittrimmen</li>
+                        <li>Hefballon</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Fysiche verklaring</h2>
+                    <p>We vervangen de blok lood door een kubus van 1m³ en we brengen die naar een diepte van 10m in zoet water</p>
+                    <div class="fragment" style="display: flex; align-items: flex-start">
+                        <img src="assets/img/archimedes1.jpg"/>
+                        <ul>
+                            <li>oppervlakte kubusvlak: $1m.1m = 1m^{2}$</li>
+                            <li>
+                                Onderzijde kubus
+                                <ul>
+                                    <li>$p_{abs} =$<span class="fragment">$2 bar = 200000\frac{N}{m^{2}}$</span></li>
+                                    <li>Kracht uitgeoefend: $F = $<span class="fragment">$200000\frac{N}{m^{2}}.1m^{2} = 200000N$</span></li>
+                                </ul>
+                            </li>
+                            <li>
+                                Bovenzijde kubus
+                                <ul>
+                                    <li>$p_{abs} =$<span class="fragment">$1,9 bar = 190000\frac{N}{m^{2}}$</span></li>
+                                    <li>Kracht uitgeoefend: $F = $<span class="fragment">$190000\frac{N}{m^{2}}.1m^{2} = 190000N$</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2>Fysiche verklaring (vervolg)</h2>
+                    <div style="display: flex; align-items: flex-start">
+                        <img src="assets/img/archimedes1.jpg"/>
+                        <ul>
+                            <li class="fragment" data-fragment-index="1">
+                                Krachtverschil: $200000N-190000N=$<span class="fragment highlight-red" data-fragment-index="7">$10000N$</span>
+                            </li>
+                            <li class="fragment"  data-fragment-index="2">&rArr; Opwaartse stuwkracht = <span class="fragment highlight-red" data-fragment-index="7">$10000N$</span></li>
+                            <li class="fragment"  data-fragment-index="3">
+                                Verplaatste vloeistof
+                                <ul>
+                                    <li>Volume: <span class="fragment" data-fragment-index="4">$1m.1m.1m = 1m^{3}$</span></li>
+                                    <li>Dichtheid: <span class="fragment" data-fragment-index="5">$1000\frac{kg}{m^{3}} = 10000\frac{N}{m^{3}}$</span></li>
+                                    <li>Gewicht: <span class="fragment"  data-fragment-index="6">$10000\frac{N}{m^{3}}.1m^{3} = $<span class="fragment highlight-red" data-fragment-index="7">$10000N$</span></span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <p>Een ondergedompeld lichaam behoud zijn gewicht</p>
+                    <p class="fragment">&rArr; 2 tegengestelde krachten</p>
+                    <ul class="fragment">
+                        <li><b>Zinken</b>: opwaartse stuwkracht <span class="fragment"><b>&lt;</b></span> gewicht</li>
+                        <li><b>Zweven</b>: opwaartse stuwkracht <span class="fragment"><b>=</b></span> gewicht</li>
+                        <li><b>Stijgen</b>: opwaartse stuwkracht <span class="fragment"><b>&gt;</b></span> gewicht</li>
+                        <li class="fragment">
+                            <p>Drijven</p>
+                            <p class="fragment">opwaartse stuwkracht ondergedompeld deel <b>=</b> gewicht</p>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Opwaartse stuwkracht</h2>
+                    <p>Bij onvervormbare lichamen</p>
+                    <ul>
+                        <li class="fragment">Onafhankelijk van diepte</li>
+                        <li class="fragment">Afhankelijk van volume</li>
+                        <li class="fragment">Afhankelijk van dichtheid van vloeistof</li>
+                    </ul>
+                </section>
+                <section data-background-image="assets/img/experiment.jpg">
+                    <h2 style="text-shadow:#888 2px 2px 3px;">Tijd voor (nog) een proefje!</h2>
+                </section>
+                <section>
+                    <h2>Dichtheid</h2>
+                    <p class="fragment" data-fragment-index="1">Gelijke volumes van verschillende stoffen hebben een verschillend gewicht en dus ook een verschillende massa.</p>
+                    <p class="fragment" data-fragment-index="2">Voor duikers zijn de belangrijkste:</p>
+                    <ul class="fragment" data-fragment-index="2">
+                        <li>Zuiver zoet water: $1000\frac{kg}{m^{3}} = 1,000\frac{kg}{dm^{3}}$</li>
+                        <li>Zout water: $1025\frac{kg}{m^{3}} = 1,025\frac{kg}{dm^{3}}$</li>
+                    </ul>
+                </section>
+                <section data-background-image="assets/img/blackboard.jpg" style="color: white;">
+                    <h2>Oefeningen op de wet van Archimedes</h2>
+                    <dl>
+                        <dt>Wat zal er gebeuren als je 1kg lood in zuiver zoet water gooit?</dt>
+                        <dd class="fragment">Dit zal afhangen van het volume verplaatste water</dd>
+                        <dt>Een duiker met zijn duikuitrusting 'weegt' 95kg, om perfect uitgetrimd te zijn in zout water heeft hij 7,5kg lood nodig. Hoeveel lood heeft hij nodig in zoet water?</dt>
+                        <dd>
+                            <ul>
+                                <li class="fragment">waterverplaatsing zout: <span class="fragment">$\frac{102,5kg}{1,025\frac{kg}{dm^{3}}}=$</span><span class="fragment">$100dm^{3}$</span></li>
+                                <li class="fragment">&rArr; waterverplaatsing zoet = $100dm^{3}$</li>
+                                <li class="fragment">&rArr; $100dm^{3}.1,000\frac{kg}{dm^{3}}=100kg$</li>
+                                <li class="fragment">&rArr; in zoet water heeft deze duiker 5kg lood nodig</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </section>
+            </section>
+            <section data-background-image="assets/img/blackboard.jpg" style="color: white;">
+                <section>
+                    <h2>Samenvattende oefening</h2>
+                    <p>Tijdens een duik op een groot zoetwater meer heb je van de schipper de opdracht gekregen om het anker van de daallijn terug naar boven te schieten door middel van een hefballon. Het is een klein anker van 20kg met een volume van 2dm<sup>3</sup>, en de duikplaats ligt op 30m diepte.</p>
+                    <ul>
+                        <li>Wat is de minimum inhoud van de hefballon?</li>
+                        <li>Vanaf welke diepte zal een ballon van 30l 'overlopen'</li>
+                    </ul>
+                </section>
+            </section>
+            <section data-background-image="assets/img/samenvatting.jpg" style="color: white; background: rgba(0,0,0,0.5); border-radius: 10px;">
+                <h2>Samenvatting</h2>
+            </section>
+            <section data-background-image="assets/img/question.jpg">
+                <h2>Zijn er nog vragen?</h2>
             </section>
         </div>
     </div>
@@ -100,6 +280,7 @@
     <script>
         // More info https://github.com/hakimel/reveal.js#configuration
         Reveal.initialize({
+            slideNumber: 'c/t',
             history: true,
 
             // More info https://github.com/hakimel/reveal.js#dependencies
@@ -116,7 +297,8 @@
                 callback: function() {
                     hljs.initHighlightingOnLoad();
                 }
-            }]
+            },
+            { src: 'plugin/math/math.js', async: true }]
         });
     </script>
 </body>
