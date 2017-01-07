@@ -32,15 +32,6 @@
                 <h3>Maarten Schroeven</h3>
             </section>
             <section>
-                <h2>Enkele afspraken</h2>
-                <p>
-                    <img src="assets/img/mute.png" style="border: 0; background: transparent; vertical-align: middle; box-shadow: none;" />
-                    <span style="vertical-align: middle;">GSM's uit of stil</span>
-                </p>
-                <p>Interactieve les</p>
-                <p>Vragen? Stel ze!</p>
-            </section>
-            <section>
                 <h2>Over mij</h2>
                 <ul>
                     <li>Maarten Schroeven</li>
@@ -59,50 +50,36 @@
                         <p>Open Source</p>
             </section>
             <section>
+                <h2>Enkele afspraken</h2>
+                <p>
+                    <img src="assets/img/mute.png" style="border: 0; background: transparent; vertical-align: middle; box-shadow: none;" />
+                    <span style="vertical-align: middle;">GSM's uit of stil</span>
+                </p>
+                <p>Vragen? Stel ze!</p>
+            </section>
+            <section>
                 <section>
                     <h2>Voorkennis</h2>
                     <h3>Korte herhaling</h3>
                 </section>
                 <section>
-                    <h2>Definities</h2>
-                    <h3>Massa</h3>
-                    <p class="fragment">Grootheid waarmee wordt gemeten hoe makkelijk het is een lichaam te versnellen</p>
-                    <ul class="fragment">
-                        <li>Symbool: <span class="fragment">m</span></li>
-                        <li>Eenheid: <span class="fragment">kg</span></li>
+                    <h2>Begrippen</h2>
+                    <ul>
+                        <li class="fragment">Massa</li>
+                        <li class="fragment">Kracht</li>
+                        <li class="fragment">Gewicht</li>
+                        <li class="fragment">Druk</li>
                     </ul>
-                </section>
-                <section>
-                    <h2>Definities</h2>
-                    <h3>Kracht</h3>
-                    <div style="display: flex;">
-                        <img class="fragment" src="assets/img/force.jpg" data-fragment-index="1" />
-                        <div>
-                            <p class="fragment" data-fragment-index="1">Grootheid die een voorwerp van snelheid kan veranderen</p>
-                            <ul class="fragment" data-fragment-index="2">
-                                <li>Symbool: <span class="fragment" data-fragment-index="3">F</span></li>
-                                <li>Eenheid: <span class="fragment" data-fragment-index="4">N</span></li>
-                            </ul>
-                            <p class="fragment" data-fragment-index="5">1N is de kracht die na 1 seconde een massa van 1kg een snelheid van 1m/s geeft</p>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <h2>Definities</h2>
-                    <h3>Gewicht</h3>
-                    <p class="fragment">Kracht waarmee de aarde een lichaam aantrekt</p>
-                    <p class="fragment">Er is gemeten dat 1kg een gewicht heeft van 9.8N</p>
-                    <p class="fragment">Voor onze berekeningen ronden we dit af naar 10N</p>
-                </section>
-                <section>
-                    <h2>Definities</h2>
-                    <h3>Druk</h3>
-                    <p class="fragment">Kracht uitgeoefend op oppervlakte ($p=\frac{F}{A}$)</p>
-                    <ul class="fragment">
-                        <li>Symbool: <span class="fragment">p</span></li>
-                        <li>Eenheid: <span class="fragment">Pa</span></li>
-                    </ul>
-                    <p class="fragment">$1 bar = 100 000 Pa = 100 000\frac{N}{m^{2}}$</p>
+                    <aside class="notes">
+                        <ul>
+                            <li>Massa: grootheid waarmee wordt gemeten hoe makkelijk het is een lichaam te versnellen</li>
+                            <li>kracht: Grootheid die een voorwerp van snelheid kan veranderen</li>
+                            <li>1N is de kracht die na 1 seconde een massa van 1kg een snelheid van 1m/s geeft</li>
+                            <li>gewicht: Kracht waarmee de aarde een lichaam aantrekt (10N)</li>
+                            <li>$1 bar = 100 000 Pa = 100 000\frac{N}{m^{2}}$
+                                <</li>
+                        </ul>
+                    </aside>
                 </section>
                 <section>
                     <h2>Wet van Pascal</h2>
@@ -281,21 +258,7 @@
                 </section>
                 <section style="color: white; background: rgba(0,0,0,0.5); border-radius: 10px;">
                     <ul>
-                        <li class="fragment">Massa (m/kg) (symbool/eenheid)</li>
-                        <li class="fragment">Kracht (F/N)</li>
-                        <li class="fragment">Gewicht: ~10N = 1kg</li>
-                        <li class="fragment">Druk (p/Pa)</li>
-                    </ul>
-                </section>
-                <section style="color: white; background: rgba(0,0,0,0.5); border-radius: 10px;">
-                    <ul>
-                        <li class="fragment">Wet Pascal</li>
-                        <li class="fragment">Wet van Boyle - Mariotte ($p . V = Cte$)</li>
-                    </ul>
-                </section>
-                <section style="color: white; background: rgba(0,0,0,0.5); border-radius: 10px;">
-                    <ul>
-                        <li class="fragment">
+                        <li>
                             Wet van Archimedes
                             <ul>
                                 <li class="fragment">Dichtheid</li>
@@ -387,6 +350,39 @@
                 async: true
             }]
         });
+    </script>
+
+    <style type="text/css">
+        /* 1. Style header/footer <div> so they are positioned as desired. */
+        
+        #footer-left {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            height: 10%;
+        }
+    </style>
+
+    <!-- 2. Create hidden header/footer <div> -->
+    <div id="hidden" style="display:none;">
+        <div id="header">
+            <div id="footer-left">
+                <img src="assets/img/nelos.png" id="footer-logo" />
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        // 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+        var header = $('#header').html();
+        if (window.location.search.match(/print-pdf/gi)) {
+            Reveal.addEventListener('ready', function(event) {
+                $('.slide-background').append(header);
+            });
+        } else {
+            $('div.reveal').append(header);
+        }
     </script>
 </body>
 
