@@ -335,10 +335,6 @@
         Reveal.initialize({
             slideNumber: 'c/t',
             history: true,
-            math: {
-                mathjax: 'node_modules/mathJax/MathJax.js',
-                config: 'TeX-AMS_HTML-full' // See http://docs.mathjax.org/en/latest/config-files.html
-            },
             // More info https://github.com/hakimel/reveal.js#dependencies
             dependencies: [{
                 src: 'plugin/notes/notes.js',
@@ -370,7 +366,7 @@
         </div>
     </div>
 
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript">
         // 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
         var header = $('#header').html();
