@@ -1,0 +1,919 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Fysica en Geneeskunde</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/moon.css">
+    <link rel="stylesheet" href="css/archimedes.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section data-background-image="assets/img/cover.jpg">
+                <h2>Fysica &amp; Geneeskunde</h2>
+                <h3>Maarten Schroeven</h3>
+            </section>
+            <section>
+                <h2>Enkele afspraken</h2>
+                <p>
+                    <img src="assets/img/mute.png" style="border: 0; background: transparent; vertical-align: middle; box-shadow: none;" />
+                    <span style="vertical-align: middle;">GSM's uit of stil</span>
+                </p>
+                <p>Vragen? Stel ze!</p>
+            </section>
+            <section>
+                <h2>Disclaimer</h2>
+                <p>Ik ben een IT'er, geen fysicus of dokter</p>
+            </section>
+            <section>
+                <section>
+                    <h1>Fysica</h1>
+                    <h2>Algemeen</h2>
+                </section>
+                <section>
+                    <h2>Druk ($p$) &amp; Kracht ($F$)</h2>
+                    <ul>
+                        <li class="fragment">Een scherpe nagel diep in plank</li>
+                        <li class="fragment">Een hamer niet diep in plank</li>
+                        <li class="fragment">Druk is een kracht per oppervlakte ($p = \frac{F}{A}$)</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Massa ($m$) &amp; Gewicht ($G$)</h2>
+                    <ul>
+                        <li class="fragment" data-fragment-index="1">
+                            Het gewicht is de kracht waarmee een lichaam (aarde) een ander lichaam (mensen) aantrekt
+                            <ul>
+                                <li class="fragment" data-fragment-index="2">
+                                    Eenheid: Newton ($N$)
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="fragment" data-fragment-index="3">
+                            De grootheid waarmee wordt gemeten hoe gemakkelijk het is om een lichaam te versnellen, noemen we zijn massa ($m$)
+                            <ul>
+                                <li class="fragment" data-fragment-index="4">
+                                    Eenheid: Kilogram ($kg$)
+                                </li>
+                            </ul>
+                        </li>
+                        <p class="fragment" style="text-align:center;" data-fragment-index="5">$1kg = 9,81N \approx 10N$</p>
+                        <p class="fragment" style="text-align:center;" data-fragment-index="5">$1 bar = 100 000 Pa = 100 000\frac{N}{m^{2}}$</p>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Samenstelling van lucht</h2>
+                    <ul>
+                        <li class="fragment">78.08% stikstof ($N_{2}$)</li>
+                        <li class="fragment">20.95% zuurstof ($O_{2}$)</li>
+                        <li class="fragment">0.03% koolstofdioxide ($CO_{2}$)</li>
+                        <li class="fragment">0.94% edelgassen</li>
+                    </ul>
+                    <div class="fragment">
+                        <span>Voor berekeningen ronden we af naar 80%$N_{2}$ en 20%$O_{2}$,</span>
+                        <span class="fragment highlight-red"> tenzij het voor nitrox of diepe duiken is!</span>
+                    </div>
+                    <div class="fragment">De massa van lucht is $1,29\frac{g}{l}$</div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Geneeskunde</h1>
+                    <h2>Algemeen</h2>
+                </section>
+                <section>
+                    <h2>Het oor</h2>
+                    <img src="assets/img/oor_detail.tif" style="background: white;" />
+                </section>
+                <section>
+                    <h2>Ademhalingsorganen</h2>
+                    <div style="display: flex; justify-content:space-between;">
+                        <img src="assets/img/ademhaling1.tif" style="background: white;" />
+                        <img src="assets/img/ademhaling2.tif" style="background: white;" />
+                        <img src="assets/img/ademhaling3.png" style="background: white;" />
+                    </div>
+                </section>
+                <section>
+                    <h2>Ademhalingsorganen (detail)</h2>
+                    <div style="display: flex; justify-content:space-around;">
+                        <img src="assets/img/bronchiolen.png" style="background: white; height: 400px" />
+                        <aside class="notes">Bronchen => bronchiolen => alveolen</aside>
+                    </div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Fysica</h1>
+                    <h2>Druk</h2>
+                </section>
+                <section>
+                    <h2>Atmosferische (lucht) druk</h2>
+                    <div>De druk dat de luchtlagen op ons uitoefenen</div>
+                    <div class="fragment">Op zeeniveau is dit $1013 hPa \approx 1 bar$</div>
+                </section>
+                <section>
+                    <h2>Hydrostatische (water) druk</h2>
+                    <div>De druk dat lagen water uitoefenen</div>
+                    <div class="fragment">Men weet dat dit toeneemt met 1 bar per 10 meter</div>
+                </section>
+                <section>
+                    <h2>Wet van Pascal</h2>
+                    <div>
+                        <blockquote>
+                            Een druk, uitgeoefend op een deel van een vloeistof, plant zich in alle richtingen voort met dezelfde grootte.
+                        </blockquote>
+                        <img src="assets/img/pascal_arrows.gif" />
+                    </div>
+                </section>
+                <section>
+                    <h2>Absolute druk ($p_{abs}$)</h2>
+                    <div>De combinatie van luchtdruk en waterdruk</div>
+                    <img src="assets/img/pascal2.jpg" />
+                </section>
+                <section>
+                    <h2>Luchtverbruik</h2>
+                    <div>Luchtverbruik is recht evenredig met de absolute druk</div>
+                    <div class="fragment">Een gemiddeld persoon verbruikt aan de oppervlakte 20l/min (GOV)</div>
+                    <div class="fragment">Op 20m zal deze persoon dus 60l/min verbruiken want $p_{abs} = 3bar$</div>
+                </section>
+                <section data-background-image="assets/img/blackboard.jpg" style="color: white;">
+                    <h2>Oefening op luchtverbruik</h2>
+                    <dl>
+                        <dt>Hoeveel lucht zal ik verbruiken als ik 15 minuten op 15 meter duik?</dt>
+                        <dd>
+                            <ul>
+                                <li class="fragment">tijd = 15 minuten</li>
+                                <li class="fragment">GOV = 20l/min</li>
+                                <li class="fragment">$p_{abs} = 2,5bar$</li>
+                                <li class="fragment"> verbruik op diepte: <span class="fragment">$p_{abs} \cdot GOV =$</span><span class="fragment"> $2,5bar \cdot 20\frac{l}{min} = 50\frac{barl}{min}$</span></li>
+                                <li class="fragment"> totaal verbruik: <span class="fragment">$50\frac{barl}{min} \cdot 15min = 750barl$</span></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </section>
+                <section>
+                    <h2>Wet van Boyle-Mariotte</h2>
+                    <div>
+                        <blockquote>
+                            Bij een constante temperatuur is het volume van een gas omgekeerd evenredig met de druk in het gas
+                        </blockquote>
+                        <div class="fragment">$p \cdot V = Cte$</div>
+                    </div>
+                </section>
+                <section>
+                    <img src="assets/img/boyle.jpg" />
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Geneeskunde</h1>
+                    <h2>Barotrauma's</h2>
+                </section>
+                <section>
+                    <h2>Luchtkamers</h2>
+                    <div>De mens heeft verschillende luchthoudende organen</div>
+                    <ul>
+                        <li class="fragment">De longen</li>
+                        <li class="fragment">De oren</li>
+                        <li class="fragment">Sinussen</li>
+                        <li class="fragment">Maag en darmen</li>
+                        <li class="fragment">Tanden</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Luchtkamers (vervolg)</h2>
+                    <div>Als duiker introduceren we extra luchthoudende plaatsen</div>
+                    <ul>
+                        <li class="fragment">Duikbril</li>
+                        <li class="fragment">Duikpak</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Masker Squeeze</h2>
+                    <div style="display: flex;">
+                        <img src="assets/img/masker_squeeze.jpg">
+                        <dl>
+                            <dt class="fragment" data-fragment-index="1">Symptomen</dt>
+                            <dd class="fragment" data-fragment-index="1">
+                                <ul>
+                                    <li>Bloeddoorlopen ogen</li>
+                                    <li>Zuigplek rond de ogen</li>
+                                </ul>
+                            </dd>
+                            <dt class="fragment" data-fragment-index="2">Reactie</dt>
+                            <dd class="fragment" data-fragment-index="2">
+                                <ul>
+                                    <li>Trekt meestal weg</li>
+                                    <li>Bij blijvende klachten(vb gezichtverlies): oogarts</li>
+                                </ul>
+                            </dd>
+                            <dt class="fragment" data-fragment-index="3">Preventie</dt>
+                            <dd class="fragment" data-fragment-index="3">
+                                <ul>
+                                    <li>Uitademen door de neus bij dalen</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
+                <section>
+                    <h2>Squeeze van het pak</h2>
+                    <div style="display: flex;">
+                        <dl>
+                            <dt class="fragment" data-fragment-index="1">Symptomen</dt>
+                            <dd class="fragment" data-fragment-index="1">
+                                <ul>
+                                    <li>Pijn, pak wordt vacuum getrokken</li>
+                                    <li>Streepvormige zwellingen op de huid</li>
+                                </ul>
+                            </dd>
+                            <dt class="fragment" data-fragment-index="2">Reactie</dt>
+                            <dd class="fragment" data-fragment-index="2">
+                                <ul>
+                                    <li>Zoals blauwe plekken</li>
+                                </ul>
+                            </dd>
+                            <dt class="fragment" data-fragment-index="3">Preventie</dt>
+                            <dd class="fragment" data-fragment-index="3">
+                                <ul>
+                                    <li>Lucht in blazen (droogpak)</li>
+                                    <li>Pak opentrekken en water in laten (nat pak)</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
+                <section>
+                    <h2>Barotrauma aan het oor</h2>
+                    <h3>Onderdruk in het middenoor</h3>
+                    <div style="display: flex;font-size: 90%;">
+                        <img src="assets/img/onderdruk_middenoor.png" style="height: 500px;">
+                        <dl>
+                            <dt class="fragment" data-fragment-index="1">Symptomen</dt>
+                            <dd class="fragment" data-fragment-index="1">
+                                <ul>
+                                    <li>Heivge pijn</li>
+                                    <li>Alternobar vertigo</li>
+                                    <li>Bloeding in trommelvlies</li>
+                                    <li>Bij verder dalen bloed in middenoor</li>
+                                </ul>
+                            </dd>
+                            <dt class="fragment" data-fragment-index="2">Reactie</dt>
+                            <dd class="fragment" data-fragment-index="2">
+                                <ul>
+                                    <li>Duik beëindigen</li>
+                                    <li>Bij pijn boven water naar NKO arts</li>
+                                </ul>
+                            </dd>
+                            <dt class="fragment" data-fragment-index="3">Preventie</dt>
+                            <dd class="fragment" data-fragment-index="3">
+                                <ul>
+                                    <li>Op tijd klaren</li>
+                                    <li>Niet duiken bij verkoudheid</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
+                <section>
+                    <h2>Barotrauma aan het oor</h2>
+                    <h3>overdruk in het middenoor: alternobar vertigo</h3>
+                    <div>
+                        Bij het stijgen klaren de oren normaal automatisch
+                    </div>
+                    <div>Beide oren niet gelijk? => Alternobar Vertigo</div>
+                    <div style="color: red;">Oren mag je niet klaren bij het stijgen! dan verstrek je dit effect</div>
+                    <aside class="notes">
+                        Men kan het manoeuvre van Toynbee uitvoeren
+                    </aside>
+                </section>
+                <section>
+                    <h2>Barotrauma aan het oor</h2>
+                    <h3>Trommelvliesscheur</h3>
+                    <div style="display: flex;font-size: 90%;">
+                        <img src="assets/img/trommelvliesscheur.png">
+                        <dl>
+                            <dt class="fragment" data-fragment-index="1">Symptomen</dt>
+                            <dd class="fragment" data-fragment-index="1">
+                                <ul>
+                                    <li>Hevige pijn die snel afneemt</li>
+                                    <li>Tijdelijke duizeligheid</li>
+                                </ul>
+                            </dd>
+                            <dt class="fragment" data-fragment-index="2">Reactie</dt>
+                            <dd class="fragment" data-fragment-index="2">
+                                <ul>
+                                    <li>Met vinger in oor stijgen</li>
+                                    <li>Boven water afdekken met steriel gaas</li>
+                                    <li>Naar NKO-arts gaan</li>
+                                </ul>
+                            </dd>
+                            <dt class="fragment" data-fragment-index="3">Preventie</dt>
+                            <dd class="fragment" data-fragment-index="3">
+                                <ul>
+                                    <li>Op tijd klaren</li>
+                                    <li>Niet duiken bij verkoudheid</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                    <aside class="notes">
+                        Kan gebeuren door:
+                        <ul>
+                            <li>oordopjes</li>
+                            <li>oorproppen</li>
+                            <li>nauw aansluitende kap</li>
+                            <li>verkoudheid</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section>
+                    <h2>Barotrauma aan het oor</h2>
+                    <h3>Binnenoorletsels</h3>
+                    <div class="display: flex;">
+                        <img src="assets/img/oor_detail.tif" style="background: white; width: 250px;" />
+                        <div class="fragment">Te fors klaren kan schokgolven veroorzaken</div>
+                        <div class="fragment">=> beschadiging van de gehoorcellen</div>
+                        <aside class="notes">
+                            Bij klachten na de duik NKO arts raadplegen
+                        </aside>
+                    </div>
+                </section>
+                <section>
+                    <h2>Squeeze van de sinussen</h2>
+                    <div style="display: flex;">
+                        <dl>
+                            <dt class="fragment" data-fragment-index="1">Symptomen</dt>
+                            <dd class="fragment" data-fragment-index="1">
+                                <ul>
+                                    <li>Pijn boven de neus (voorhoofdsinus)</li>
+                                    <li>Pijn boven de tanden (bovenkaaksinus)</li>
+                                </ul>
+                            </dd>
+                            <dt class="fragment" data-fragment-index="2">Reactie</dt>
+                            <dd class="fragment" data-fragment-index="2">
+                                <ul>
+                                    <li>Duik stopzetten</li>
+                                </ul>
+                            </dd>
+                            <dt class="fragment" data-fragment-index="3">Preventie</dt>
+                            <dd class="fragment" data-fragment-index="3">
+                                <ul>
+                                    <li>Niet duiken bij verkoudheid</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
+                <section>
+                    <h2>Tandbarotrauma</h2>
+                    <div style="display: flex;">
+                        <dl>
+                            <dt class="fragment" data-fragment-index="1">Symptomen</dt>
+                            <dd class="fragment" data-fragment-index="1">
+                                <ul>
+                                    <li>Pijn in de tanden</li>
+                                    <li>Loskomen van vullen</li>
+                                    <li>Imploderen van tand tijdens dalen</li>
+                                    <li>Exploderen van tand tijdens stijgen</li>
+                                </ul>
+                            </dd>
+                            <dt class="fragment" data-fragment-index="2">Preventie</dt>
+                            <dd class="fragment" data-fragment-index="2">
+                                <ul>
+                                    <li>Goede tandhygiene</li>
+                                    <li>Regelmatig op controle</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
+                <section>
+                    <h2>Longoverdruk</h2>
+                    <div>Zeer zwaar duikongeval, vaak met dodelijke afloop.</div>
+                    <dl>
+                        <dt class="fragment" data-fragment-index="1">Ontstaan</dt>
+                        <dl class="fragment" data-fragment-index="1">
+                            <ul>
+                                <li>Wet van Boyle-Mariotte</li>
+                                <li>Niet kunnen uitademen (te snel stijgen, hindernis)</li>
+                            </ul>
+                        </dl>
+                        <dt class="fragment" data-fragment-index="2">Mogelijke hindernis</dt>
+                        <dl class="fragment" data-fragment-index="2">
+                            <ul>
+                                <li>Spasme van stemspleet</li>
+                                <li>Misvorming luchtwegen</li>
+                                <li>Slijmen (vb mucoviscidose)</li>
+                                <li>Airtrapping</li>
+                            </ul>
+                        </dl>
+                    </dl>
+                    <aside class="notes">
+                        <div>Spasme: contact met water, paniek, angst</div>
+                        <div>Airtrapping: afsluiting van alveool door COPD, bloodshift,...</div>
+                        <div>
+                            Stel gerust: voorkomen.
+                            <ul>
+                                <li>Goed uitademen bij stijgen</li>
+                                <li>laatste meters continu uitademen</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </section>
+                <section>
+                    <h2>Barotrauma aan de longen</h2>
+                    <h3>Longoverdruk: longbeschadiging</h3>
+                    <div style="display: flex;">
+                        <img src="assets/img/bronchiolen.png" style="background: white; width: 250px;" />
+                        <dl>
+                            <dt class="fragment" data-fragment-index="1">Symptomen</dt>
+                            <dd class="fragment" data-fragment-index="1">
+                                <ul>
+                                    <li>Ophoesten van bloed</li>
+                                    <li>Pijnlijke moeilijke ademhaling</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
+                <section>
+                    <h2>Barotrauma aan de longen</h2>
+                    <h3>Longoverdruk: klaplong</h3>
+                    <div style="display: flex; justify-content: space-between;" class="fragment" data-fragment-index="1">
+                        <img src="assets/img/klaplong1.png" style="height: 260px;" />
+                        <img src="assets/img/klaplong2.png" style="height: 260px;" />
+                    </div>
+                    <dl>
+                        <dt class="fragment" data-fragment-index="2">Symptomen</dt>
+                        <dd class="fragment" data-fragment-index="2">
+                            <ul>
+                                <li>Aan oppervlakte snelle ondiepe ademhaling</li>
+                                <li>Borstkas beweegt assymetrisch</li>
+                                <li>Spanningspneumothorax kan dodelijk zijn</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </section>
+                <section>
+                    <h2>Barotrauma aan de longen</h2>
+                    <h3>Longoverdruk: mediastinaal/subcutaan emfyseem</h3>
+                    <div style="display: flex;">
+                        <img src="assets/img/media-hals_emfyseem.png" style=" width: 250px; height: 350px;" class="fragment" data-fragment-index="1" />
+                        <dl>
+                            <dt class="fragment" data-fragment-index="2">Symptomen mediastinaal</dt>
+                            <dd class="fragment" data-fragment-index="2">
+                                <ul>
+                                    <li>Stekende borende pijn achter borstbeen</li>
+                                    <li>Gevoel van druk in borstkas</li>
+                                    <li>Pijnlijke ademnhaling met hoesten</li>
+                                    <li>Moeilijk slikken en hees spreken</li>
+                                </ul>
+                            </dd>
+                            <dt class="fragment" data-fragment-index="3">Symptomen subcutaan</dt>
+                            <dd class="fragment" data-fragment-index="3">
+                                <ul>
+                                    <li>Spraakverandering</li>
+                                    <li>Dikke opgeblazen hals</li>
+                                    <li>hals voelt als natte krakende sneeuw</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
+                <section>
+                    <h2>Barotrauma aan de longen</h2>
+                    <h3>Algemeen</h3>
+                    <dl>
+                        <dt class="fragment" data-fragment-index="1">Symptomen</dt>
+                        <dd class="fragment" data-fragment-index="1">
+                            <ul>
+                                <li>Meteen zichtbaar bij boven komen</li>
+                                <li>Moeten niet allemaal voorkomen</li>
+                                <li>kunnen verder evolueren naar schock en overlijden</li>
+                            </ul>
+                        </dd>
+                        <dt class="fragment" data-fragment-index="2">Behandeling</dt>
+                        <dd class="fragment" data-fragment-index="2">
+                            <ul>
+                                <li>100% zuurstof toedienen</li>
+                                <li>112 verwittigen => naar reanimatiecentrum</li>
+                                <li>Bij bewustzijn in V-houding, anders stabiele zijlig</li>
+                                <li>Niet laten drinken!</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </section>
+                <section>
+                    <h2>Darmkolieken</h2>
+                    <div style="display: flex;">
+                        <dl>
+                            <dt class="fragment" data-fragment-index="1">Symptomen</dt>
+                            <dd class="fragment" data-fragment-index="1">
+                                <ul>
+                                    <li>Zeer pijnlijke maag/darmkrampen</li>
+                                    <li>Uitzetten van ingeslikte lucht</li>
+                                </ul>
+                            </dd>
+                            <dt class="fragment" data-fragment-index="2">Reactie</dt>
+                            <dd class="fragment" data-fragment-index="2">
+                                <ul>
+                                    <li>Terug dalen (niet dieper als 6m)</li>
+                                    <li>Indien niet mogelijk => afwachtende houding</li>
+                                    <li>Bij aanhoudende klachten => arts</li>
+                                </ul>
+                            </dd>
+                            <dt class="fragment" data-fragment-index="3">Preventie</dt>
+                            <dd class="fragment" data-fragment-index="3">
+                                <ul>
+                                    <li>Geen koolzuurhoudende dranken</li>
+                                    <li>oren klaren zonder te slikken</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Fysica</h1>
+                    <h2>Wet van Archimedes</h2>
+                </section>
+                <section>
+                    <h2>Wet van Archimedes</h2>
+                    <div style="display: flex; align-items: flex-start; justify-content: space-between;" class="fragment" data-fragment-index="1">
+                        <img src="assets/img/archimedes.jpg" style="height: 10em;" />
+                        <blockquote>
+                            <p>Een lichaam ondergedompeld in een vloeistof, ondergaat een <span class="fragment highlight-red">opwaartse stuwkracht</span> gelijk aan het gewicht van de verplaatste vloeistof.</p>
+                        </blockquote>
+                    </div>
+                </section>
+                <section>
+                    <h2>Opwaartse stuwkracht</h2>
+                    <div style="display: flex; align-items: flex-start; justify-content: space-between;">
+                        <img src="assets/img/zinken.png" />
+                        <div>
+                            <p><span style="color: mediumpurple;">opwaartse stuwkracht</span> <b class="fragment" data-fragment-index="1">&lt;</b> <span style="color: red;">gewicht blok</span></p>
+                            <p class="fragment" data-fragment-index="2">De blok zal <span class="fragment highlight-blue" data-fragment-index="3">zinken</span><span class="fragment fade-out" data-fragment-index="3">/zweven/stijgen</span></p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2>Opwaartse stuwkracht</h2>
+                    <div style="display: flex; align-items: flex-start; justify-content: space-between;">
+                        <img src="assets/img/zweven.png" />
+                        <div>
+                            <p><span style="color: mediumpurple;">opwaartse stuwkracht</span> <b class="fragment" data-fragment-index="1">=</b> <span style="color: red;">gewicht blok</span></p>
+                            <p class="fragment" data-fragment-index="2">De blok zal <span class="fragment fade-out" data-fragment-index="3">zinken/</span><span class="fragment highlight-blue" data-fragment-index="3">zweven</span><span class="fragment fade-out" data-fragment-index="3">/stijgen</span></p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2>Opwaartse stuwkracht</h2>
+                    <div style="display: flex; align-items: flex-start; justify-content: space-between;">
+                        <img src="assets/img/stijgen.png" />
+                        <div>
+                            <p><span style="color: mediumpurple;">opwaartse stuwkracht</span> <b class="fragment" data-fragment-index="1">&gt;</b> <span style="color: red;">gewicht blok</span></p>
+                            <p class="fragment" data-fragment-index="2">De blok zal <span class="fragment fade-out" data-fragment-index="3">zinken/zweven/</span><span class="fragment highlight-blue" data-fragment-index="3">stijgen</span></p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2>Opwaartse stuwkracht</h2>
+                    <div style="display: flex; align-items: flex-start; justify-content: space-between;">
+                        <img src="assets/img/drijven3.png" />
+                        <div>
+                            <h3>drijven</h3>
+                            <p class="fragment"><span style="color: mediumpurple;">opwaartse stuwkracht ondergedompeld deel</span> <br /><b>=</b> <br><span style="color: red;">gewicht blok</span></p>
+                            <p class="fragment">voorbeeld: boot</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2>Opwaartse stuwkracht</h2>
+                    <ul>
+                        <li>Onafhankelijk van diepte</li>
+                        <li>Afhankelijk van volume</li>
+                        <li>Afhankelijk van <span class="fragment highlight-red">dichtheid</span> van vloeistof</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Dichtheid</h2>
+                    <p>Gelijke volumes van verschillende stoffen hebben een verschillend gewicht en dus ook een verschillende massa.</p>
+                    <div class="fragment" style="display: flex; align-items: flex-start; justify-content: space-between;">
+                        <img src="assets/img/dichtheid_water.jpg" />
+                        <img src="assets/img/dichtheid_melk.jpg" />
+                    </div>
+                </section>
+                <section>
+                    <h2>Dichtheid</h2>
+                    <p>Voor duikers zijn de belangrijkste:</p>
+                    <ul>
+                        <li>Zuiver zoet water: $1000\frac{kg}{m^{3}} = 1,000\frac{kg}{dm^{3}} = 1,000\frac{kg}{l}$</li>
+                        <li>Zout water: $1025\frac{kg}{m^{3}} = 1,025\frac{kg}{dm^{3}} = 1,025\frac{kg}{l}$</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Toepassingen in de duiksport</h2>
+                    <ul>
+                        <li class="fragment">Uittrimmen</li>
+                        <li class="fragment">Uitloden</li>
+                        <li class="fragment">Hefballon</li>
+                        <li class="fragment">Vlotter aan een buddyline</li>
+                    </ul>
+                </section>
+                <section data-background-image="assets/img/blackboard.jpg" style="color: white;">
+                    <h2>Oefeningen op de wet van Archimedes</h2>
+                    <dl>
+                        <dt>Een duiker met zijn duikuitrusting 'weegt' 95kg, om perfect uitgetrimd te zijn in zoet water heeft hij 5kg lood nodig. Hoeveel lood heeft hij nodig in zout water?</dt>
+                    </dl>
+                </section>
+                <section data-background-image="assets/img/blackboard.jpg" style="color: white;">
+                    <h3>Zoet water</h3>
+                    <p class="fragment">zweven: $gewicht_{duiker} = gewicht_{water}$</p>
+                    <div class="fragment">
+                        $$ \begin{align} 95kg + 5kg & = V_{water} \cdot dichtheid \\ 100kg & = V_{water} \cdot 1,000\frac{kg}{l} \\ \frac{100kg}{1\frac{kg}{l}} & = V_{water} \\ 100l & = V_{water} \\ \end{align} $$
+                    </div>
+                </section>
+                <section data-background-image="assets/img/blackboard.jpg" style="color: white;">
+                    <h3>Zout water</h3>
+                    <p class="fragment">zweven: $gewicht_{duiker} = gewicht_{water}$</p>
+                    <div class="fragment">
+                        $$ \begin{align} gewicht_{duiker} & = V_{water} \cdot dichtheid \\ gewicht_{duiker} & = 100l \cdot 1,025\frac{kg}{l} \\ gewicht_{duiker} & = 102,5kg \\ \end{align} $$
+                    </div>
+                    <p class="fragment">&rArr; deze duiker (95kg) heeft 7,5kg lood nodig in zout water</p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Fysica</h1>
+                    <h2>Oplossen van gassen</h2>
+                </section>
+                <section>
+                    <h2>Wet van Henry</h2>
+                    <blockquote>Bij constante temperatuur en bij verzadiging is de hoeveelheid opgelost gas in een vloeistof recht evenredig met de druk van dat gas in contact met die vloeistof.</blockquote>
+                </section>
+                <section>
+                    <h2>Wet van Henry</h2>
+                    <h3>Toegepast op duiken</h3>
+                    <div class="fragment">Aan de oppervlakte is ons bloed (de vloeistof) verzadigt met stikstof (het gas)</div>
+                    <div class="fragment">We ademen lucht in onder druk</div>
+                    <div class="fragment">De druk van de lucht (en dus de stikstof) is groter dan wat er in ons bloed zit</div>
+                    <div class="fragment">Ons bloed gaat dus extra stikstof opnemen om het evenwicht te bewaren</div>
+                    <div class="fragment">Deze werking is omgekeerd bij het stijgen</div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Geneeskunde</h1>
+                    <h2>Decompressieongeval</h2>
+                </section>
+                <section>
+                    <h2>Stikstofbel</h2>
+                    <div>Als we stijgen gaat de opgelost stikstof in ons bloed uitzetten tot belletjes</div>
+                    <ul>
+                        <li class="fragment">
+                            Welke fysicawetten?
+                            <ul>
+                                <li class="fragment">Wet van Boyle-Mariotte</li>
+                                <li class="fragment">Wet van Henry</li>
+                            </ul>
+                        </li>
+                        <li class="fragment">Deze belletjes worden via de longen uitgewasemd</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Decompressieongeval</h2>
+                    <div>Als we te snel stijgen kan het volgende gebeuren</div>
+                    <ul>
+                        <li class="fragment">Belletjes worden te snel te groot en raken vast</li>
+                        <li class="fragment">Er zijn te veel belletjes voor de longen om te verwerken</li>
+                    </ul>
+                    <div class="fragment">Belletjes die niet uitgewasemd worden kunnen een decompressieongeval veroorzaken</div>
+                </section>
+                <section>
+                    <h2>Decompressieongeval</h2>
+                    <h3>Symptomen</h3>
+                    <ul>
+                        <li class="fragment">Huidsymptomen (schapen en vlooien)</li>
+                        <li class="fragment">Gewrichtspijnen, spierpijn (de bends)</li>
+                        <li class="fragment">Zenuwsymptomen (paraplegie, quadraplegie of hemiplegie)</li>
+                        <li class="fragment">Ademhalingsmoeilijkheden (chokes)</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Decompressieongeval</h2>
+                    <h3>Behandeling</h3>
+                    <ul>
+                        <li class="fragment">112 verwittigen</li>
+                        <li class="fragment">100% zuurstof toedienen</li>
+                        <li class="fragment">Zoveel mogelijk drinken (pas op met longoverdruk!)</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Fysica</h1>
+                    <h2>Allerlei</h2>
+                </section>
+                <section>
+                    <h2>Geluid</h2>
+                    <ul>
+                        <li class="fragment">Geluidsverplaatsing in lucht: +- 340m/s</li>
+                        <li class="fragment">Geluidsverplaatsing in water: +- 1440m/s</li>
+                        <li class="fragment">=> niet weten vanwaar geluid komt (boten!)</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Waarneming</h2>
+                    <ul>
+                        <li class="fragment" data-fragment-index="1">Onze ogen zijn gemaakt voor in lucht te werken</li>
+                        <li class="fragment" data-fragment-index="2">Onderwater lijkt alles troebel</li>
+                        <li class="fragment" data-fragment-index="3">=> we doen een duikbril aan</li>
+                        <li class="fragment" data-fragment-index="5">Nadeel: inval op oog veranderd</li>
+                        <li class="fragment" data-fragment-index="6">=> Alles lijkt 1/3 groter en 1/4 dichter</li>
+                    </ul>
+                    <img src="assets/img/waarneming.png" style="height: 300px;" class="fragment" data-fragment-index="4" />
+                </section>
+                <section>
+                    <h2>Kleuren</h2>
+                    <div style="display: flex;">
+                        <img src="assets/img/kleuren.png" class="fragment" />
+                        <ul>
+                            <li class="fragment">Kleuren worden geapsorbeerd</li>
+                            <li class="fragment">Op diepte lijkt alles blauw</li>
+                            <li class="fragment">=> neem een duiklamp mee voor originele kleuren</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Geneeskunde</h1>
+                    <h2>Allerlei</h2>
+                </section>
+                <section>
+                    <h2>Ensoufflement (buiten adem)</h2>
+                    <div style="display: flex; font-size: 80%">
+                        <img src="assets/img/buiten_adem.png" style="width: 200px; height: 250px" />
+                        <dl>
+                            <dt class="fragment" data-fragment-index="1">Oorzaak</dt>
+                            <dd class="fragment" data-fragment-index="1">
+                                <ul>
+                                    <li>Grote inspanning leveren</li>
+                                    <li>Een te grote dode ruimte</li>
+                                    <li>Snelle oppervlakkige ademhaling</li>
+                                </ul>
+                            </dd>
+                            <dt class="fragment" data-fragment-index="2">Symptomen</dt>
+                            <dd class="fragment" data-fragment-index="2">
+                                <ul>
+                                    <li>Sneller ademen, hijgen</li>
+                                    <li>Oppervlakkige, onvoldoende ventilatie</li>
+                                    <li>Uiteindelijk bewusteloos</li>
+                                </ul>
+                            </dd>
+                            <dt class="fragment" data-fragment-index="3">Reactie</dt>
+                            <dd class="fragment" data-fragment-index="3">
+                                <ul>
+                                    <li>Inspanningen staken (zitten, hangen)</li>
+                                    <li>Concentreren op ademnhaling</li>
+                                </ul>
+                            </dd>
+                            <dt class="fragment" data-fragment-index="4">Preventie</dt>
+                            <dd class="fragment" data-fragment-index="4">
+                                <ul>
+                                    <li>Limieten kennen</li>
+                                    <li>Goed materiaal met goede ventilatie</li>
+                                    <li>Inspassingen aanpassen aan fysiek</li>
+                                    <li>Gecontroleerd ademen</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                    <aside class="notes">
+                        Viceuze cirkel: ademnood > sneller ademen > meer arbeid
+                    </aside>
+                </section>
+            </section>
+
+            <section data-background-image="assets/img/samenvatting.jpg">
+                <section style="color: white; background: rgba(0,0,0,0.5); border-radius: 10px;">
+                    <h2>Samenvatting</h2>
+                </section>
+                <section style="color: white; background: rgba(0,0,0,0.5); border-radius: 10px;">
+                    <h2>Fysica</h2>
+                    <ul>
+                        <li class="fragment">Wet van Pascal</li>
+                        <li class="fragment">Wet van Boyle-Mariotte</li>
+                        <li class="fragment">Wet van Archimedes</li>
+                        <li class="fragment">Wet van Henry</li>
+                        <li class="fragment">Geluid / Waarneming / Kleuren</li>
+                    </ul>
+                </section>
+                <section style="color: white; background: rgba(0,0,0,0.5); border-radius: 10px;">
+                    <h2>Geneeskunde</h2>
+                    <ul>
+                        <li class="fragment">
+                            Barotrauma
+                            <ul>
+                                <li class="fragment">Squeeze van het pak</li>
+                                <li class="fragment">Squeeze van het masker</li>
+                                <li class="fragment">Barotrauma van het oor</li>
+                                <li class="fragment">Squeeze van de sinussen</li>
+                                <li class="fragment">Barotrauma de tanden</li>
+                                <li class="fragment">Longoverdruk</li>
+                                <li class="fragment">Darmkolieken</li>
+                            </ul>
+                        </li>
+                        <li class="fragment">Decompressieongeval</li>
+                        <li class="fragment">Ensoufflement</li>
+                    </ul>
+                </section>
+            </section>
+            <section data-background-image="assets/img/question.jpg">
+                <h2>Zijn er nog vragen?</h2>
+                <a href="mailto:maarten@sonaryr.be" style="color: white;">maarten@sonaryr.be</a>
+            </section>
+            <section data-background-image="assets/img/thanks.jpg">
+                <h2>Bedankt voor jullie aandacht!</h2>
+            </section>
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            slideNumber: 'c/t',
+            history: true,
+            math: {
+                mathjax: 'node_modules/mathJax/MathJax.js',
+                config: 'TeX-AMS_HTML-full' // See http://docs.mathjax.org/en/latest/config-files.html
+            },
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            dependencies: [{
+                src: 'plugin/notes/notes.js',
+                async: true
+            }, {
+                src: 'plugin/math/math.js',
+                async: true
+            }]
+        });
+    </script>
+
+    <style type="text/css">
+        /* 1. Style header/footer <div> so they are positioned as desired. */
+        
+        #footer-left {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            height: 10%;
+        }
+    </style>
+
+    <!-- 2. Create hidden header/footer <div> -->
+    <div id="hidden" style="display:none;">
+        <div id="header">
+            <div id="footer-left">
+                <img src="assets/img/nelos.png" id="footer-logo" />
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        // 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+        var header = $('#header').html();
+        if (window.location.search.match(/print-pdf/gi)) {
+            Reveal.addEventListener('ready', function(event) {
+                $('.slide-background').append(header);
+            });
+        } else {
+            $('div.reveal').append(header);
+        }
+    </script>
+</body>
+
+</html>
